@@ -36,8 +36,17 @@ User.hasMany(Follower, {
     onDelete: 'CASCADE',
 });
 
-Follower.belongsToMany(User, {
+User.hasMany(Follower, {
+    foreignKey: 'follower_id',
+    onDelete: 'CASCADE',
+});
+
+Follower.belongsTo(User, {
     foreignKey: 'user_id',
+});
+
+Follower.belongsTo(User, {
+    foreignKey: 'follower_id',
 });
 
 module.exports = { User, Follower, Comment, Bleet };
