@@ -14,6 +14,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+//POST ROUTE FOR TESTING FOLLOWERS IN INCOMNIA
+router.post('/', async (req, res) => {
+  /* Template for testing post route
+  {
+    "user_id": 4,
+    "follower_id": 1
+  }
+  */
+    try {
+      const newFollow = await Follower.create({
+        //takes all of the components of the req body and expands it into individual elements. It builds the many-to-many relationship between the follower and the followee  
+        follower_id: req.body.follower_id,
+        user_id: req.body.user_id
+      });
+      //if the post req passes, the newBleet object is created, otherwise, throw an error
+      res.status(200).json(newFollow);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
 // router.post('/', withAuth, async (req, res) => {
 //     try {
 //       const newFollow = await Follower.create({

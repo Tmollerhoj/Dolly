@@ -13,6 +13,32 @@ router.get('/', async (req, res) => {
   }
 });
 
+//POST ROUTE FOR TESTING IN INSOMNIA
+//Creates a new user when submitted through the fetch request from signupFormHandler in the login.js
+router.post('/', async (req, res) => {
+    /* Template for testing post route 
+  {
+    "username": "Leroy",
+    "email": "leroy@jenkins.com",
+    "password": "LEROYYYYYYJENKINSSSSS"
+  }
+  */
+
+  try {
+    const userData = await User.create(req.body);
+
+    //saves the session as it begins through logging in the user that just signed up.
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 
 // //Creates a new user when submitted through the fetch request from signupFormHandler in the login.js
 // router.post('/', async (req, res) => {
