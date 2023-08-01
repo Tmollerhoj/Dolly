@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
     if (description) {
       const response = await fetch(`/api/bleets`, {
         method: 'POST',
-        body: JSON.stringify({ username, description }),
+        body: JSON.stringify({ description }),
         headers: {
           'Content-Type': 'application/json',
         },

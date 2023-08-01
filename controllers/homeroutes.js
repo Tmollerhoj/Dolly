@@ -18,9 +18,9 @@ router.get('/', async (req, res) => {
     const bleets = bleetData.map((bleet) => bleet.get({ plain: true }));
 
     // Pass the parsed data and session flag into handlebars homepage template
-    res.render('homepage', { 
-      bleets, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      bleets,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -35,7 +35,9 @@ router.get('/bleet/:id', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
-        },
+        }, { 
+          model: Comment 
+        }
       ],
     });
 
