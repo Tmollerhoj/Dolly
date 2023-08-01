@@ -13,8 +13,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// //POST ROUTE FOR TESTING IN INSOMNIA
-// //Creates a new user when submitted through the fetch request from signupFormHandler in the login.js
+// // //POST ROUTE FOR TESTING IN INSOMNIA
+// // //Creates a new user when submitted through the fetch request from signupFormHandler in the login.js
 // router.post('/', async (req, res) => {
 //     /* Template for testing post route 
 //   {
@@ -23,7 +23,6 @@ router.get('/', async (req, res) => {
 //     "password": "LEROYYYYYYJENKINSSSSS"
 //   }
 //   */
-
 //   try {
 //     const userData = await User.create(req.body);
 
