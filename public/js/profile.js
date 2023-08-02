@@ -1,19 +1,19 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const description = document.querySelector('#bleet-desc').value.trim();
+    const content = document.querySelector('#bleet-desc').value.trim();
   
-    if (description) {
+    if (content) {
       const response = await fetch(`/api/bleets`, {
         method: 'POST',
-        body: JSON.stringify({  description }),
+        body: JSON.stringify({  content }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert('Failed to create bleet');
       }
