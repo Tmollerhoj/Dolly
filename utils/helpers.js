@@ -1,6 +1,8 @@
+const format = require('date-fns/format')
+
 module.exports = {
-    format_date: (date) => {
-      // Format date as MM/DD/YYYY
-      return date.toLocaleDateString();
-    },
-  };
+  formated_date: (date) => {
+    return format(date, 'MMM d, yyyy hh:mm')
+  }
+}
+  
