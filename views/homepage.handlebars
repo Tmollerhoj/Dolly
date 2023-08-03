@@ -16,15 +16,14 @@
 {{#each bleets as |bleet| }}
 <div class="row mb-4 project"> 
   <a href="/bleet/{{bleet.id}}">
-  <div class="col-md-5">
-    <p class="bleeter-username">{{bleet.user.username}}</p>
-    <p class="bleet-date">{{formated_date bleet.date}}</p>
-  </div>
-  <div class="col-md-7">
+  <div class="col-md-5 card">
+    <p class="bleeter-username">@{{bleet.user.username}}</p>
     <p class="bleet-content">
       {{bleet.content}}
     </p>
+    <p class="bleet-date" id="date">{{formated_date bleet.date}}</p>
   </div>
+  
   </a>
 </div>
 {{/each}}

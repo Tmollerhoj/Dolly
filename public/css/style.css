@@ -27,7 +27,7 @@ h3,
 h5,
 h6 {
   font-weight: 700;
-  margin: 0;
+  margin: 4px;
   color: var(--light-dark);
   line-height: 1.25;
 }
@@ -123,6 +123,8 @@ p {
   max-width: 75%;
 }
 
+
+
 .title {
   font-size: 3rem;
   background-color: var(--primary);
@@ -170,8 +172,9 @@ p {
 
 .card {
   margin: 0 0 20px 0;
-  border: 2px solid var(--dark);
+  border: 2px solid var(--secondary);
   border-radius: var(--border-radius);
+  padding: 5px;
 }
 
 .card-header {
@@ -179,6 +182,10 @@ p {
   background-color: var(--dark);
   padding: 1%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+#date {
+  font-size: small;
 }
 
 .card-body {
@@ -220,6 +227,7 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
 
 .form-label,
 .form-input,
