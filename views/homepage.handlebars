@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Bleet:</h3>
+
+    <form class="form new-bleet-form">
+      <div class="form-group">
+        <label for="bleet-desc">Bleet:</label>
+        <textarea class="form-input" id="bleet-desc" name="bleet-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Bleet</button>
+      </div>
+    </form>
+  </div>
+
+{{#each bleets as |bleet| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <a href="/bleet/{{bleet.id}}">{{bleet.title}}</a>
+    </h2>
+    <p class="bleeter-username">{{bleet.user.username}}</p>
+    <p class="bleet-date">{{format_date bleet.date}}</p>
+  </div>
+  <div class="col-md-7">
+    <p class="bleet-content">
+      {{bleet.content}}
+    </p>
+  </div>
+</div>
+{{/each}}
+
+<script src="./js/profile.js"></script>
