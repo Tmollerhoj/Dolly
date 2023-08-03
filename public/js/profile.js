@@ -1,24 +1,4 @@
-const newFormHandler = async (event) => {
-    event.preventDefault();
 
-    const content = document.querySelector('#bleet-desc').value.trim();
-  
-    if (content) {
-      const response = await fetch(`/api/bleets`, {
-        method: 'POST',
-        body: JSON.stringify({  content }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to create bleet');
-      }
-    }
-  };
   
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
@@ -36,11 +16,9 @@ const newFormHandler = async (event) => {
     }
   };
   
-  document
-    .querySelector('.new-bleet-form')
-    .addEventListener('submit', newFormHandler);
   
-  document
-    .querySelector('.bleet-list')
-    .addEventListener('click', delButtonHandler);
+  const deleteBtns = document.querySelectorAll('.delete-btn')
+  for(let i= 0; i<deleteBtns.length; i++){
+    deleteBtns[i].addEventListener('click', delButtonHandler)
+  }
   
