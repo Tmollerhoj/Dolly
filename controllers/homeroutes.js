@@ -67,7 +67,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID, and include all bleets from that user. 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: bleet }],
+      include: [{ model: Bleet }],
     });
 
     const user = userData.get({ plain: true });
