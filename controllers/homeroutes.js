@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Bleet, User } = require('../models');
+const { Bleet, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -35,7 +35,7 @@ router.get('/bleet/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         }, { 
           model: Comment 
         }
@@ -51,6 +51,7 @@ router.get('/bleet/:id', async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
+    console.log(err)
   }
 });
 
