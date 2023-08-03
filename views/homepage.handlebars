@@ -14,11 +14,9 @@
   </div>
 
 {{#each bleets as |bleet| }}
-<div class="row mb-4 project">
+<div class="row mb-4 project"> 
+  <a href="/bleet/{{bleet.id}}">
   <div class="col-md-5">
-    <h2>
-      <a href="/bleet/{{bleet.id}}">{{bleet.title}}</a>
-    </h2>
     <p class="bleeter-username">{{bleet.user.username}}</p>
     <p class="bleet-date">{{formated_date bleet.date}}</p>
   </div>
@@ -27,6 +25,7 @@
       {{bleet.content}}
     </p>
   </div>
+  </a>
 </div>
 {{/each}}
 
