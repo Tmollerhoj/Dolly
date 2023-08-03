@@ -37,13 +37,19 @@ router.get('/bleet/:id', async (req, res) => {
           model: User,
           attributes: ['username'],
         }, { 
-          model: Comment 
+          model: Comment,
+          include: [
+            {
+            model: User,
+            attributes: ['username']
+          }
+          ]
         }
       ],
     });
 
     const bleet = bleetData.get({ plain: true });
-
+    console.log(bleet)
     //renders to the bleet handlebars template
     res.render('bleet', {
       ...bleet,
