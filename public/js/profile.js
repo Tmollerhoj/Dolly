@@ -36,11 +36,7 @@ const newFormHandler = async (event) => {
     }
   };
   
-  document
-    .querySelector('.new-bleet-form')
-    .addEventListener('submit', newFormHandler);
   
-  document
-    .querySelector('.bleet-list')
-    .addEventListener('click', delButtonHandler);
+  const deleteBtn = document.querySelector('.delete-btn');
+  document.addEventListener('click', delButtonHandler);
   

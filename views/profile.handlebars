@@ -22,7 +22,7 @@
         {{#each bleets as |bleet| }}
         <li>
             {{content}}
-            <button onclick="deletePost('{{id}}')">Delete</button>
+            <button class="btn delete-btn" data-id={{id}}>Delete</button>
         </li>
         {{/each}}
         </div>
@@ -31,4 +31,4 @@
 </body>
 </html>
 
-<script src="./js/bleet.js"></script>
+<script src="./js/profile.js"></script>
