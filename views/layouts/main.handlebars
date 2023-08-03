@@ -12,15 +12,21 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1> <a href="/"> Dolly </a> </h1>
+      
+      <h1>
+        <img src="/images/Dolly_logo.png" alt=""> 
+        <a href="/"> Dolly </a> 
+      </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+        <h4>
+          {{#if logged_in}}
+          <a href="/profile">Profile</a> |
+          <a href="../../public/js/logout.js" id="logout">Logout</a>
+          {{else}}
+          <a href="/login">Login</a>
+          {{/if}}
+        </h4>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
