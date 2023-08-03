@@ -1,10 +1,10 @@
 <div class="text-center">
-  <h5>{{content}}</h5>
-  <p>Created by {{user.username}} on {{formated_date date}}</p>
-  <p>
-  </p>
-  {{#if logged_in}}
-
+  <div class="card">
+    <h4>@{{user.username}}</h4>
+    <p>{{content}}</p>
+    <p id="date">{{formated_date date}}</p>
+    {{#if logged_in}}
+  </div>
 <form class="form comment-form">
   <h5>Add a Comment</h5>
   <div class="form-group">
@@ -21,9 +21,9 @@
 <div class = "comment-section">
 <h5>Comments:</h5>
 {{#each comments as |comment| }}
-<div class="row mb-4 project">
+<div class="row mb-4 project card">
   <div class="col-md-5">
-    <p>{{comment.user.username}}</p>
+    <p>@{{comment.user.username}}</p>
   </div>
   <div class="col-md-7">
     <p>
