@@ -65,8 +65,14 @@ npm start
 ## Usage
 
 - Register a new account or log in if you already have an account.
+![image](https://github.com/Tmollerhoj/Dolly/assets/97570338/b4455009-ecca-4585-a7fb-e41c830d2a03)
+
 - On the homepage, you can see tweets from the users you follow.
+![image](https://github.com/Tmollerhoj/Dolly/assets/97570338/d5967dec-f93d-4992-adaa-7b2b69663cd4)
+
 - You can post new tweets from your profile page or view and interact with tweets from other users.
+![image](https://github.com/Tmollerhoj/Dolly/assets/97570338/e431dd87-926f-4f30-983b-ada6aae69848)
+
 
 ## Technologies
 
