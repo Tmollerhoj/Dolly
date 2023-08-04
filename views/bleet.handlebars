@@ -23,11 +23,13 @@
 {{#each comments as |comment| }}
 <div class="row mb-4 project card">
   <div class="col-md-5">
-    <p>@{{comment.user.username}}</p>
+    <p class="bleet-username">@{{comment.user.username}}</p>
+    
   </div>
   <div class="col-md-7">
     <p>
       {{comment.content}}
+      <p class="bleet-date" id="date">{{formated_date comment.date_created}}</p>
     </p>
   </div>
 </div>

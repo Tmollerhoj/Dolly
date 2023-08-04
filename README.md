@@ -90,3 +90,7 @@ Contributions are welcome! If you find any issues or want to add new features, f
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use and modify this code as per the terms of the license.
+
+## Credits
+
+Foundation for views, controllers, and boilerplate code comes from the BCS mini-project from Unit 14 on Model-View-Controller.
